@@ -1,5 +1,5 @@
-# The notarised-backend-orm.
-This project exports the `sequelize` notarised-backend-orm:
+# The apsis-backend-orm.
+This project exports the `sequelize` apsis-backend-orm:
 
 - models
 
