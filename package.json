@@ -1,0 +1,31 @@
+{
+  "name": "backend-orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo:all",
+    "db:migrate:reset": "sequelize-cli db:migrate:undo:all && yarn db:migrate",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:seed:undo": "sequelize-cli db:seed:undo:all",
+    "version": "echo $npm_package_version",
+    "release": "git add . && VERSION=$(npm run version --silent) && git push origin release/v$VERSION && git tag v$VERSION && git push origin v$VERSION && git checkout master && git pull --rebase && git rebase release/v$VERSION && git push origin master && git checkout dev && git pull --rebase && git rebase release/v$VERSION && git push origin dev",
+    "lint": "eslint ./orm --ext js --no-ignore --fix && npm run format",
+    "format": "prettier --config ./.prettierrc --write  \"./**/*.+(js|ts|json)\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "sequelize": "^6.18.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import-order-alphabetical": "^1.0.1",
+    "prettier": "^2.6.2"
+  }
+}
