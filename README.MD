@@ -1,5 +1,5 @@
-# The apsis-backend-orm.
-This project exports the `sequelize` apsis-backend-orm:
+# The aspis-backend-orm.
+This project exports the `sequelize` aspis-backend-orm:
 
 - models
 

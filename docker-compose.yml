@@ -7,8 +7,8 @@ services:
         image: postgres:12
         environment:
             PGDATA: /var/lib/postgresql/data/pgdata
-            POSTGRES_DB: apsis_dev
-            POSTGRES_USER: apsis
+            POSTGRES_DB: aspis_dev
+            POSTGRES_USER: aspis
             POSTGRES_PASSWORD: secret_password
         ports:
             - "5432:5432"
