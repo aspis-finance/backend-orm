@@ -7,9 +7,9 @@ services:
         image: postgres:12
         environment:
             PGDATA: /var/lib/postgresql/data/pgdata
-            POSTGRES_DB: 
-            POSTGRES_USER: 
-            POSTGRES_PASSWORD: 
+            POSTGRES_DB: apsis_dev
+            POSTGRES_USER: apsis
+            POSTGRES_PASSWORD: secret_password
         ports:
             - "5432:5432"
         volumes:
