@@ -9,7 +9,7 @@ module.exports = {
       },
       poolId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         references: {
           model: 'pools',
           key: 'id',
