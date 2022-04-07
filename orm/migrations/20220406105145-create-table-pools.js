@@ -15,10 +15,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      type: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
       iconSource: {
         type: Sequelize.STRING,
         allowNull: false,
