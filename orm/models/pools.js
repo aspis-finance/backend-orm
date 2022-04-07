@@ -95,24 +95,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
-      website: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      docs: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      twitter: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      telegram: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      medium: {
-        type: DataTypes.STRING,
+      projectLinks: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: true,
       },
       whitelistRequired: {

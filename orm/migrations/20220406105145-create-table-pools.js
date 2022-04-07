@@ -89,24 +89,8 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false,
       },
-      website: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      docs: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      twitter: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      telegram: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      medium: {
-        type: Sequelize.STRING,
+      projectLinks: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: true,
       },
       whitelistRequired: {
