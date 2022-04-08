@@ -23,6 +23,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      isEnabled: {
+        type: Sequelize.BOOLEAN,
+      },
       feeAddress: {
         type: Sequelize.STRING,
         allowNull: false,

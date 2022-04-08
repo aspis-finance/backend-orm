@@ -29,6 +29,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      isEnabled: {
+        type: DataTypes.BOOLEAN,
+      },
       feeAddress: {
         type: DataTypes.STRING,
         allowNull: false,
