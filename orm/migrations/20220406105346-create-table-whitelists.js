@@ -3,13 +3,13 @@ module.exports = {
     await queryInterface.createTable('whitelists', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
+        default: Sequelize.UUIDV4,
       },
       poolId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.UUID,
         references: {
           model: 'pools',
           key: 'id',
