@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   Whitelists.init(
     {
+      id: {
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull: false,
+      },
       address: {
         type: DataTypes.STRING,
         allowNull: false,
