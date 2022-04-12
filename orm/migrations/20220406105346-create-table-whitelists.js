@@ -26,9 +26,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
+    }, {
+      uniqueKeys: {
+        actions_unique: {
+          fields: ['address', 'poolId'],
+        },
+      },
     })
   },
-
   down: async (queryInterface) => {
     await queryInterface.dropTable('whitelists')
   },
