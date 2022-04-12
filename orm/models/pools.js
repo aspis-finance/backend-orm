@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Pools.init(
     {
+      id: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull: false,
+      },
       name: {
         type: DataTypes.STRING,
         allowNull: false,
