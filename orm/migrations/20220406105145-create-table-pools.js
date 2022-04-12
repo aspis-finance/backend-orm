@@ -2,10 +2,9 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('pools', {
       id: {
-        allowNull: false,
-        primaryKey: true,
         type: Sequelize.UUID,
-        default: Sequelize.UUIDV4,
+        defaultValue: Sequelize.UUIDV4,
+        primaryKey: true,
       },
       name: {
         type: Sequelize.STRING,
