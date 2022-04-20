@@ -11,30 +11,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      slug: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      iconSource: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      recieverAddress: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      isEnabled: {
-        type: Sequelize.BOOLEAN,
-      },
-      feeAddress: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      investmentTokenAddress: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      swapCurrency: {
+      address: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -42,19 +19,49 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      minimumInvestment: {
+      claimAllocationAddress: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      claimAllocationAmount: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      claimAllocationInitPercent: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      claimAllocationMonthlyPercent: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      claimStartTime: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      enabled: {
+        type: Sequelize.BOOLEAN,
+      },
+      feeAddress: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      feePercent: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      maximumInvestment: {
-        type: Sequelize.INTEGER,
+      iconSrc: {
+        type: Sequelize.STRING,
         allowNull: false,
+      },
+      investFinishTime: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        validate: {
+          isDate: true,
+        },
       },
       investLimit: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      feePercentage: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
@@ -65,26 +72,19 @@ module.exports = {
           isDate: true,
         },
       },
-      investEndTime: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        validate: {
-          isDate: true,
-        },
-      },
-      tokenSymbol: {
+      projectDescription: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      swapRatio: {
-        type: Sequelize.STRING,
-        allowNull: false,
+      projectLinks: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        allowNull: true,
       },
       projectName: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      projectDescription: {
+      receiverAddress: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -92,12 +92,37 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false,
       },
-      projectLinks: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
-        allowNull: true,
+      slug: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      swapCurrency: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      swapRatio: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      tokenAddress: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      tokenSymbol: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      userMaxInvest: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      userMinInvest: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       whitelistRequired: {
         type: Sequelize.BOOLEAN,
+        allowNull: false,
       },
       whitelistUrl: {
         allowNull: true,

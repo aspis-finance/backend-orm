@@ -23,30 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      slug: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      iconSource: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      recieverAddress: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      isEnabled: {
-        type: DataTypes.BOOLEAN,
-      },
-      feeAddress: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      investmentTokenAddress: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      swapCurrency: {
+      address: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -54,19 +31,49 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      minimumInvestment: {
+      claimAllocationAddress: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      claimAllocationAmount: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      claimAllocationInitPercent: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      claimAllocationMonthlyPercent: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      claimStartTime: {
+        type: DataTypes.DATE,
+        allowNull: true,
+      },
+      enabled: {
+        type: DataTypes.BOOLEAN,
+      },
+      feeAddress: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      feePercent: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      maximumInvestment: {
-        type: DataTypes.INTEGER,
+      iconSrc: {
+        type: DataTypes.STRING,
         allowNull: false,
+      },
+      investFinishTime: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        validate: {
+          isDate: true,
+        },
       },
       investLimit: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      feePercentage: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
@@ -77,26 +84,19 @@ module.exports = (sequelize, DataTypes) => {
           isDate: true,
         },
       },
-      investEndTime: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        validate: {
-          isDate: true,
-        },
-      },
-      tokenSymbol: {
+      projectDescription: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      swapRatio: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      projectLinks: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+        allowNull: true,
       },
       projectName: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      projectDescription: {
+      receiverAddress: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -104,12 +104,37 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
-      projectLinks: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: true,
+      slug: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      swapCurrency: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      swapRatio: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      tokenAddress: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      tokenSymbol: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      userMaxInvest: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      userMinInvest: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
       },
       whitelistRequired: {
         type: DataTypes.BOOLEAN,
+        allowNull: false,
       },
       whitelistUrl: {
         allowNull: true,
