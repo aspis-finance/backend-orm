@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Pools.init(
     {
-      uuid: {
+      id: {
         primaryKey: true,
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,

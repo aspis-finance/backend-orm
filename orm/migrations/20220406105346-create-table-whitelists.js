@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.UUID,
         references: {
           model: 'pools',
-          key: 'uuid',
+          key: 'id',
         },
       },
       address: {
