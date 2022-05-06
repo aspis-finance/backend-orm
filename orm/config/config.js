@@ -1,0 +1,18 @@
+module.exports = {
+  development: {
+    username: '',
+    password: '',
+    database: '',
+    host: '127.0.0.1',
+    port: 5432,
+    dialect: 'postgres',
+  },
+  staging: {
+    use_env_variable: true,
+    dialect: 'postgres',
+  },
+  production: {
+    use_env_variable: true,
+    dialect: 'postgres',
+  },
+}
