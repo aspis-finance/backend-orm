@@ -7,13 +7,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
+      address: {
+        allowNull: false,
         type: Sequelize.STRING,
-        allowNull: false,
       },
-      type: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+      isWhitelited: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,

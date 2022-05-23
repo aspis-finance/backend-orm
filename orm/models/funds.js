@@ -13,13 +13,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   Funds.init(
     {
-      name: {
+      address: {
+        allowNull: false,
         type: DataTypes.STRING,
-        allowNull: false,
       },
-      type: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+      isWhitelited: {
+        type: DataTypes.BOOLEAN,
       },
     },
     {
