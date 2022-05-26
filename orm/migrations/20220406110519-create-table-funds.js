@@ -11,7 +11,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      isWhitelited: {
+      isWhitelisted: {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {
