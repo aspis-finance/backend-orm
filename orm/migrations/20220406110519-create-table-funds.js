@@ -14,6 +14,12 @@ module.exports = {
       isWhitelisted: {
         type: Sequelize.BOOLEAN,
       },
+      logoImg: {
+        type: Sequelize.UUID,
+      },
+      description: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

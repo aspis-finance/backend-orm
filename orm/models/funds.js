@@ -20,6 +20,14 @@ module.exports = (sequelize, DataTypes) => {
       isWhitelisted: {
         type: DataTypes.BOOLEAN,
       },
+      logoImg: {
+        type: DataTypes.UUID,
+        allowNull: false,
+      },
+      description: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,
