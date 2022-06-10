@@ -1,8 +1,8 @@
 module.exports = {
   development: {
-    username: '',
-    password: '',
-    database: '',
+    username: 'aspis',
+    password: 'secret_password',
+    database: 'aspis_dev',
     host: '127.0.0.1',
     port: 5432,
     dialect: 'postgres',
