@@ -29,6 +29,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      links: {
+        type: DataTypes.JSONB,
+      },
     },
     {
       sequelize,
