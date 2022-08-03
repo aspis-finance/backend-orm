@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate() {
-    // Relations are here
+      // Relations are here
     }
   }
   Users.init(
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: 'users',
       tableName: 'users',
-    },
+    }
   )
   return Users
 }

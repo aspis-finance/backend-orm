@@ -13,7 +13,7 @@ const init = (username, password, host, port, database) => {
   if (config.use_env_variable) {
     sequelize = new Sequelize(
       `postgres://${username}:${password.replace(/%(?![0-9][0-9a-fA-F]+)/g, '%25')}@${host}:${port}/${database}`,
-      config,
+      config
     )
   } else {
     sequelize = new Sequelize(config.database, config.username, config.password, config)

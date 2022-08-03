@@ -9,12 +9,16 @@ module.exports = {
   },
   staging: {
     use_env_variable: true,
-    url: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${5432}/${process.env.POSTGRES_DB}`,
+    url: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${
+      process.env.POSTGRES_HOST
+    }:${5432}/${process.env.POSTGRES_DB}`,
     dialect: 'postgres',
   },
   production: {
     use_env_variable: true,
-    url: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${5432}/${process.env.POSTGRES_DB}`,
+    url: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${
+      process.env.POSTGRES_HOST
+    }:${5432}/${process.env.POSTGRES_DB}`,
     dialect: 'postgres',
   },
 }
