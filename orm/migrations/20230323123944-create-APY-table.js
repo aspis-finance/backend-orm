@@ -18,16 +18,16 @@ module.exports = {
           },
         },
         twentyFourHours: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         sevenDays: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         total: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         lpTokenPrice: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         createdAt: {
           allowNull: false,

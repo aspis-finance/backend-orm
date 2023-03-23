@@ -20,16 +20,16 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       twentyFourHours: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       sevenDays: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       total: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       lpTokenPrice: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
     },
     {

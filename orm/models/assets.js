@@ -26,10 +26,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
       },
       decimals: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
       balance: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
     },
     {

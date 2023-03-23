@@ -24,10 +24,10 @@ module.exports = {
           type: Sequelize.STRING,
         },
         decimals: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         balance: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         createdAt: {
           allowNull: false,
