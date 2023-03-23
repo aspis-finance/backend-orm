@@ -1,19 +1,17 @@
 const { Model } = require('sequelize')
 
 module.exports = (sequelize, DataTypes) => {
-  class Funds extends Model {
+  class Assets extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(model) {
-      // Relations are here
-      Funds.hasMany(model.assets)
-      Funds.hasMany(model.APY)
+      Assets.belongsTo(model.funds)
     }
   }
-  Funds.init(
+  Assets.init(
     {
       id: {
         primaryKey: true,
@@ -22,30 +20,23 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       address: {
-        allowNull: false,
         type: DataTypes.STRING,
       },
-      isWhitelisted: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
+      symbol: {
+        type: DataTypes.STRING,
       },
-      logoImg: {
-        type: DataTypes.UUID,
-        allowNull: false,
+      decimals: {
+        type: DataTypes.INTEGER,
       },
-      description: {
-        allowNull: false,
-        type: DataTypes.TEXT,
-      },
-      links: {
-        type: DataTypes.JSONB,
+      amount: {
+        type: DataTypes.INTEGER,
       },
     },
     {
       sequelize,
-      modelName: 'funds',
-      tableName: 'funds',
+      modelName: 'assets',
+      tableName: 'assets',
     }
   )
-  return Funds
+  return Assets
 }

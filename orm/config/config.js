@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    username: 'aspis',
+    username: 'aspis_dev',
     password: 'secret_password',
     database: 'aspis_dev',
     host: '127.0.0.1',

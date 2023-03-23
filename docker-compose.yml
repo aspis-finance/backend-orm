@@ -4,11 +4,11 @@
 version: "3"
 services:
     db:
-        image: postgres:12
+        image: postgres:13.4
         environment:
             PGDATA: /var/lib/postgresql/data/pgdata
             POSTGRES_DB: aspis_dev
-            POSTGRES_USER: aspis
+            POSTGRES_USER: aspis_dev
             POSTGRES_PASSWORD: secret_password
         ports:
             - "5432:5432"
