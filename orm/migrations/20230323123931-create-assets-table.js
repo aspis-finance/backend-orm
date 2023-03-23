@@ -26,7 +26,7 @@ module.exports = {
         decimals: {
           type: Sequelize.INTEGER,
         },
-        amount: {
+        balance: {
           type: Sequelize.INTEGER,
         },
         createdAt: {
