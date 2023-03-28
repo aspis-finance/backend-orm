@@ -13,11 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   APY.init(
     {
-      id: {
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       twentyFourHours: {
         type: DataTypes.STRING,
       },

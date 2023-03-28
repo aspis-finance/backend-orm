@@ -13,11 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Assets.init(
     {
-      id: {
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       address: {
         type: DataTypes.STRING,
       },

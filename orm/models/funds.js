@@ -15,11 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Funds.init(
     {
-      id: {
-        primaryKey: true,
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       address: {
         allowNull: false,
         type: DataTypes.STRING,
