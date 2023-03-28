@@ -4,8 +4,7 @@ module.exports = {
       'APY',
       {
         id: {
-          type: Sequelize.UUID,
-          defaultValue: Sequelize.UUIDV4,
+          type: Sequelize.INTEGER,
           primaryKey: true,
           allowNull: false,
         },
