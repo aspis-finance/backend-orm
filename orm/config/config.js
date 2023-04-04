@@ -13,6 +13,8 @@ module.exports = {
       process.env.POSTGRES_HOST
     }:${5432}/${process.env.POSTGRES_DB}`,
     dialect: 'postgres',
+    logging: false,
+
   },
   production: {
     use_env_variable: true,
@@ -20,5 +22,6 @@ module.exports = {
       process.env.POSTGRES_HOST
     }:${5432}/${process.env.POSTGRES_DB}`,
     dialect: 'postgres',
+    logging: false,
   },
 }
