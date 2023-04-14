@@ -28,6 +28,9 @@ module.exports = {
         balance: {
           type: Sequelize.STRING,
         },
+        value: {
+          type: Sequelize.STRING,
+        },
         createdAt: {
           allowNull: false,
           type: Sequelize.DATE,

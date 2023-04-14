@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       balance: {
         type: DataTypes.STRING,
       },
+      value: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,
