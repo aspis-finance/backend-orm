@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      name: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
       isWhitelisted: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
