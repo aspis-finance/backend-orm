@@ -38,12 +38,15 @@ module.exports = (sequelize, DataTypes) => {
       links: {
         type: DataTypes.JSONB,
       },
+      chainId: {
+        type: DataTypes.INTEGER,
+      },
     },
     {
       sequelize,
       modelName: 'funds',
       tableName: 'funds',
-    }
+    },
   )
   return Funds
 }
