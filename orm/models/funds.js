@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(model) {
       // Relations are here
       Funds.hasMany(model.assets)
+      Funds.hasMany(model.assetsCache)
       Funds.hasMany(model.APY)
     }
   }
