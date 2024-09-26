@@ -1,6 +1,4 @@
-const {
-  Model,
-} = require('sequelize')
+const { Model } = require('sequelize')
 
 module.exports = (sequelize, DataTypes) => {
   class LPPrice extends Model {
@@ -13,13 +11,25 @@ module.exports = (sequelize, DataTypes) => {
       LPPrice.belongsTo(model.funds)
     }
   }
-  LPPrice.init({
-    time: DataTypes.DATE,
-    price: DataTypes.STRING,
-    fundId: DataTypes.STRING,
-  }, {
-    sequelize,
-    modelName: 'LPPrice',
-  })
+  LPPrice.init(
+    {
+      time: DataTypes.DATE,
+      price: DataTypes.STRING,
+      fundId: DataTypes.STRING,
+      data: {
+        type: DataTypes.JSON,
+        get() {
+          return JSON.parse(this.getDataValue('data'))
+        },
+        set(data) {
+          this.setDataValue('data', JSON.stringify(data))
+        },
+      },
+    },
+    {
+      sequelize,
+      modelName: 'LPPrice',
+    },
+  )
   return LPPrice
 }
