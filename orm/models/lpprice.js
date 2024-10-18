@@ -16,15 +16,6 @@ module.exports = (sequelize, DataTypes) => {
       time: DataTypes.DATE,
       price: DataTypes.STRING,
       fundId: DataTypes.STRING,
-      data: {
-        type: DataTypes.JSON,
-        get() {
-          return JSON.parse(this.getDataValue('data'))
-        },
-        set(data) {
-          this.setDataValue('data', JSON.stringify(data))
-        },
-      },
     },
     {
       sequelize,
