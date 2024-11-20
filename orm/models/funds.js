@@ -42,6 +42,10 @@ module.exports = (sequelize, DataTypes) => {
       chainId: {
         type: DataTypes.INTEGER,
       },
+      token: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,
