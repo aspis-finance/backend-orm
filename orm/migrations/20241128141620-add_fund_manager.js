@@ -2,7 +2,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.addColumn('funds', 'manager', {
-      type: Sequelize.JSON,
+      type: Sequelize.STRING,
     })
   },
 
