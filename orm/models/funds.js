@@ -47,8 +47,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
       },
       manager: {
+        allowNull: false,
         type: DataTypes.STRING,
-        allowNull: true,
       },
     },
     {
